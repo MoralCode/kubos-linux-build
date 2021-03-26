@@ -80,7 +80,7 @@ BR2_ROOTFS_POST_SCRIPT_ARGS="${BR2_TARGET_UBOOT_CUSTOM_REPO_VERSION}"
 BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="${BR2_EXTERNAL_KUBOS_LINUX_PATH}/board/kubos/raspberrypi-3b-plus/linux-kubos.config"
 BR2_LINUX_KERNEL_CONFIG_FRAGMENT_FILES="${BR2_EXTERNAL_KUBOS_LINUX_PATH}/common/linux-kubos.config"
-BR2_LINUX_KERNEL_CUSTOM_DTS_PATH="${BR2_EXTERNAL_KUBOS_LINUX_PATH}/board/kubos/raspberrypi-3b-plus/bcm2710-rpi-3-b.dts ${BR2_EXTERNAL_KUBOS_LINUX_PATH}/board/kubos/raspberrypi-3b-plus/bcm2710-rpi-3-b-plus.dts ${BR2_EXTERNAL_KUBOS_LINUX_PATH}/board/kubos/raspberrypi-3b-plus/bcm2837-rpi-3-b.dts"
+#BR2_LINUX_KERNEL_CUSTOM_DTS_PATH="${BR2_EXTERNAL_KUBOS_LINUX_PATH}/board/kubos/raspberrypi-3b-plus/bcm2710-rpi-3-b.dts ${BR2_EXTERNAL_KUBOS_LINUX_PATH}/board/kubos/raspberrypi-3b-plus/bcm2710-rpi-3-b-plus.dts ${BR2_EXTERNAL_KUBOS_LINUX_PATH}/board/kubos/raspberrypi-3b-plus/bcm2837-rpi-3-b.dts"
 BR2_LINUX_KERNEL_NEEDS_HOST_OPENSSL=y
 BR2_LINUX_KERNEL_LZ4=y
 
