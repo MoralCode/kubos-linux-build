@@ -38,7 +38,7 @@ mv kubos-kernel.itb ${BINARIES_DIR}/kernel
 
 # Create the base upgrade file
 cd ${BR2_EXTERNAL_KUBOS_LINUX_PATH}/tools
-./kubos-package.sh -b ${BRANCH} -t raspberrypi0 -v base -i ${BOARD_DIR}/kpack.its
+./kubos-package.sh -b ${BRANCH} -t raspberrypi-3b-plus -v base -i ${BOARD_DIR}/kpack.its
 
 mv kpack-base.itb ${TARGET_DIR}/upgrade
 
