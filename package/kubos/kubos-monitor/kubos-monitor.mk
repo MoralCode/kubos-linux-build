@@ -25,9 +25,10 @@ endef
 
 # Install the application into the rootfs file system
 define MONITOR_INSTALL_TARGET_CMDS
+
 	mkdir -p $(TARGET_DIR)/usr/sbin
 	PATH=$(PATH):~/.cargo/bin:$(HOST_DIR)/usr/bin && \
-	arm-linux-strip $(BUILD_DIR)/kubos-$(KUBOS_VERSION)/$(CARGO_OUTPUT_DIR)/monitor-service
+	$(HOST_DIR)/bin/$(firstword $(subst -, , $(CARGO_TARGET)))-linux-strip $(BUILD_DIR)/kubos-$(KUBOS_VERSION)/$(CARGO_OUTPUT_DIR)/monitor-service
 	$(INSTALL) -D -m 0755 $(BUILD_DIR)/kubos-$(KUBOS_VERSION)/$(CARGO_OUTPUT_DIR)/monitor-service \
 		$(TARGET_DIR)/usr/sbin
 				
