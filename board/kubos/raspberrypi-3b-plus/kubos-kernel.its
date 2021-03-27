@@ -25,7 +25,7 @@
 
 	images {
 		kernel@1 {
-			data = /incbin/("./zImage");
+			data = /incbin/("./Image");
 			type = "kernel";
 			arch = "arm";
 			os = "linux";
