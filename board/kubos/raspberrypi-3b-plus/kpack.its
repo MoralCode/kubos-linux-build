@@ -48,8 +48,8 @@
 				algo = "sha256";
 			};
 		};
-		bcm2708-rpi-zero.dtb@1 {
-			data = /incbin/("./bcm2708-rpi-zero.dtb");
+		bcm2710-rpi-3-b-plus.dtb@1 {
+			data = /incbin/("./bcm2710-rpi-3-b-plus.dtb");
 			type = "firmware";
 			arch = "arm";
 			os = "linux";
