@@ -28,6 +28,7 @@ if ! grep -qE '^arm_64bit=1' "${BINARIES_DIR}/rpi-firmware/config.txt"; then
 # enable 64bits support
 arm_64bit=1
 __EOF__
+fi
 
 # Create the kernel FIT file
 cp ${BOARD_DIR}/kubos-kernel.its ${BINARIES_DIR}/
