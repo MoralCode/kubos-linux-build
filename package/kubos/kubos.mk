@@ -26,7 +26,7 @@ else
 	KUBOS_VERSION = $(VERSION)
 endif
 
-KUBOS_BR_TARGET = $(lastword $(subst /, ,$(dir $(BR2_LINUX_KERNEL_CUSTOM_DTS_PATH))))
+KUBOS_BR_TARGET = $(lastword $(subst /, ,$(dir $(BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE))))
 ifeq ($(KUBOS_BR_TARGET),at91sam9g20isis)
 	KUBOS_TARGET = kubos-linux-isis-gcc
 	CARGO_TARGET = armv5te-unknown-linux-gnueabi
@@ -39,6 +39,9 @@ else ifeq ($(KUBOS_BR_TARGET),beaglebone-black)
 else ifeq ($(KUBOS_BR_TARGET),raspberrypi)
 	KUBOS_TARGET = kubos-linux-raspberry-pi
 	CARGO_TARGET = arm-unknown-linux-gnueabi
+else ifeq ($(KUBOS_BR_TARGET),raspberrypi-3b-plus)
+	KUBOS_TARGET = kubos-linux-raspberry-pi
+	CARGO_TARGET = aarch64-unknown-linux-gnu
 else
 	KUBOS_TARGET = unknown
 endif
